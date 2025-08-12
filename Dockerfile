@@ -25,5 +25,4 @@ RUN pip install --no-cache-dir --upgrade pip \
 EXPOSE $PORT
 
 # Do not set defaults for env vars; Railway sets PORT
-CMD ["sh", "-c", "langgraph dev --allow-blocking --host 0.0.0.0 --port $PORT"]
-
+CMD ["sh", "-c", "langgraph dev --host 0.0.0.0 --port $PORT --no-reload --no-browser"]
