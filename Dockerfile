@@ -22,7 +22,7 @@ RUN pip install --no-cache-dir --upgrade pip \
   && pip install --no-cache-dir .
 
 # Railway provides $PORT; bind to 0.0.0.0
-EXPOSE 2024
+EXPOSE 8080
 
 # Do not set defaults for env vars; Railway sets PORT
 CMD ["sh", "-c", "langgraph dev --allow-blocking --host 0.0.0.0 --port $PORT"]
